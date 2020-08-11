@@ -2,3 +2,8 @@
 <p><%= @task.details  %></p>
 <p>Already done?<%= @task.completed  %></p>
 <%= link_to "Back to Tasks", tasks_path %>
+<%= link_to "Edit this Task", edit_path %>
+<%= link_to "Delete this task",
+            task_path(@task),
+            method: :delete,
+            data: { confirm: "Are you sure to delete?" } %>
